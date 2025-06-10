@@ -1,0 +1,20 @@
+<div class="places-list">
+  <div *ngFor="let place of places" class="place-item">
+    <div class="place-header">
+      <h3 class="place-name">{{ place.name }}</h3>
+        <button class="delete-btn" 
+                (click)="deletePlace(place.id)"
+                [disabled]="!place.id">
+          <span class="material-icons">delete</span>
+          <span class="tooltip">Eliminar</span>
+        </button>
+    </div>
+    
+    <div class="coordinates">
+      <span>Lat: {{ place.latitude | number:'1.4-4' }}</span>
+      <span>Lng: {{ place.longitude | number:'1.4-4' }}</span>
+    </div>
+    
+    <p class="description">{{ place.description }}</p>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()" class="p-4 border rounded bg-light shadow-sm">
+  <h2>Nuevo Lugar</h2>
+
+  <div class="mb-3">
+    <label>Nombre</label>
+    <input class="form-control" formControlName="name" placeholder="Nombre del lugar" />
+  </div>
+
+  <div class="mb-3">
+    <label>Descripción</label>
+    <textarea class="form-control" formControlName="description" placeholder="Descripción"></textarea>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col">
+      <label>Latitud</label>
+      <input class="form-control" type="number" formControlName="latitude" step="0.000001" />
+    </div>
+    <div class="col">
+      <label>Longitud</label>
+      <input class="form-control" type="number" formControlName="longitude" step="0.000001" />
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label>Imagen (URL)</label>
+    <input class="form-control" type="url" formControlName="image" placeholder="https://ejemplo.com/imagen.jpg" />
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="formulario.invalid">Guardar</button>
+</form>
+

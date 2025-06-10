@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+
+import { NewPlaceComponent } from './components/new-place/new-place.component';
+import { PlaceListComponent } from './components/place-list/place-list.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [NewPlaceComponent,PlaceListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

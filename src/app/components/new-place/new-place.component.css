@@ -1,0 +1,43 @@
+/* styles.css o en el archivo SCSS del componente */
+
+form.container {
+  max-width: 600px;
+  background-color: #fefefe;
+}
+
+form h2 {
+  font-size: 1.75rem;
+  border-bottom: 2px solid #0d6efd;
+  padding-bottom: 0.5rem;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #333;
+}
+
+input.form-control,
+textarea.form-control {
+  border-radius: 0.5rem;
+  border: 1px solid #ced4da;
+  transition: box-shadow 0.3s ease;
+}
+
+input.form-control:focus,
+textarea.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+  border-color: #0d6efd;
+}
+
+button[type="submit"] {
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0b5ed7;
+}
+
+button.btn-outline-secondary:hover {
+  background-color: #e9ecef;
+}
