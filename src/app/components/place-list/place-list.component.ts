@@ -46,9 +46,9 @@ async deletePlace(placeId: string | undefined): Promise<void> {
     if (!confirmDelete) return;
     
     await this.placesService.deletePlace(placeId);
-    console.log('Lugar borrado, actualizando lista...'); // Debug
+    console.log('Lugar borrado, actualizando lista...'); 
     
-    // Filtramos localmente para mejor rendimiento
+  
     this.places = this.places.filter(p => p.id !== placeId);
     
   } catch (error) {
